@@ -47,7 +47,7 @@ export const Faq: FC = () => {
         </div>
         <div className={s.content}>
           {faqData.map((item, index) => (
-            <FaqItem title={item.title} text={item.text} />
+            <FaqItem title={item.title} text={item.text} index={index}/>
           ))}
         </div>
       </div>
