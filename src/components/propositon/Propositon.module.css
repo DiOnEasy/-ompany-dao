@@ -1,0 +1,23 @@
+.wrapper {
+    padding: 180px 0 0;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #0000001A;
+    margin-bottom: 50px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 33px;
+    padding-bottom: 91px;
+    border-bottom: 1px solid #0000001A;
+
+}

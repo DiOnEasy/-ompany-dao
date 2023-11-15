@@ -1,11 +1,11 @@
 import { FC } from "react";
-
+import s from './PropositionServices.module.css';
 export const PropositionServices: FC = () => {
   return (
-    <>
-      <div>
-        <p>Jurisdictions</p>
-        <p>
+    <div className={s.wrapper}>
+      <div className={s.item}>
+        <p className={s.title}>Jurisdictions</p>
+        <p className={s.icons}>
           <span>
             <img src="/img/proposition-services/usa.svg" alt="" />
             US
@@ -16,9 +16,9 @@ export const PropositionServices: FC = () => {
           </span>
         </p>
       </div>
-      <div>
-        <p>Payment Methods</p>
-        <p>
+      <div className={s.item}>
+        <p className={s.title}>Payment Methods</p>
+        <p className={s.icons}>
           <span>
             <img src="/img/proposition-services/visa.svg" alt="" />
           </span>
@@ -31,17 +31,17 @@ export const PropositionServices: FC = () => {
           <span>ACH, Wire</span>
         </p>
       </div>
-      <div>
-        <p>Networks</p>
-        <p>
+      <div className={s.item}>
+        <p className={s.title}>Networks</p>
+        <p className={s.icons}>
           <span>
-            <img src="/img/proposition-services/g-pay.svg" alt="" /> Ethereum
+            <img src="/img/proposition-services/ethereum.svg" alt="" /> Ethereum
           </span>
           <span>
-            <img src="/img/proposition-services/g-pay.svg" alt="" /> Polygon
+            <img src="/img/proposition-services/polygon.svg" alt="" /> Polygon
           </span>
         </p>
       </div>
-    </>
+    </div>
   );
 };

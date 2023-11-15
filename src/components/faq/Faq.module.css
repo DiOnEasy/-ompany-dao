@@ -1,0 +1,12 @@
+.wrapper{
+    padding-top: 180px;
+}
+
+.title{
+font-size: 64px;
+font-weight: 500;
+line-height: 64px;
+letter-spacing: -0.05em;
+padding-bottom: 32px;
+border-bottom: 1px solid #0000001A;
+}

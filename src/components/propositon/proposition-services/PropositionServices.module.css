@@ -1,0 +1,35 @@
+.wrapper {
+    padding: 50px 0;
+    display: flex;
+    column-gap: 23.25%;
+    border-bottom: 1px solid #0000001A;
+}
+
+
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+
+.icons span {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    column-gap: 4px;
+   
+
+}

@@ -1,7 +1,7 @@
 import { FC } from "react";
+import s from "./Propositon.module.css";
 import { PropositionItem } from "./proposition-item/PropositonItem";
 import { PropositionServices } from "./proposition-services/PropositionServices";
-
 interface IProposition {
   title: string;
   text: string;
@@ -27,21 +27,24 @@ const propositionData: IProposition[] = [
 
 export const Proposition: FC = () => {
   return (
-    <>
-      <div>
-        <div>
+    <div className={s.wrapper}>
+      <div className={s.propositon__wrapper}>
+        <div className={s.title}>
           <p>Value Proposition</p>
         </div>
-        <div>
-        {propositionData.map((item, index)=>(
-          <PropositionItem title={item.title} text={item.text} image={`/img/proposition/proposition-${index+1}.svg`} />
-        ))}
+        <div className={s.content}>
+          {propositionData.map((item, index) => (
+            <PropositionItem
+              title={item.title}
+              text={item.text}
+              image={`/img/proposition/proposition-${index + 1}.svg`}
+            />
+          ))}
         </div>
-        <div></div>
       </div>
-      <div>
-        <PropositionServices/>
+      <div className={s.services}>
+        <PropositionServices />
       </div>
-    </>
+    </div>
   );
 };

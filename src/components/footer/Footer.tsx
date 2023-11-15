@@ -1,19 +1,21 @@
+import s from "./Footer.module.css";
+
 export const Footer = () => {
   return (
-    <div>
-      <div>
-        <div>
+    <div className={s.wrapper}>
+      <div className={s.contacts}>
+        <div className={s.qr}>
           <img src="/img/qr.svg" alt="" />
         </div>
-        <div>
+        <div className={s.contacts__text}>
           <p>
-            Delta Alpha Omega DAO LLC 1531 Bellaire St, Denver, CO, 80220, USA
+            Delta Alpha Omega DAO LLC<br/> 1531 Bellaire St, Denver, CO, 80220, USA
           </p>
           <p>email@companydao.org</p>
-          <p>Telegram, WhatsApp: +1 307 217-3127</p>
+          <p>Telegram, WhatsApp: <span>+1 307 217-3127</span></p>
         </div>
       </div>
-      <div>
+      <div className={s.links}>
         <p>
           <a href="">More</a>
         </p>
@@ -23,7 +25,7 @@ export const Footer = () => {
         <p>
           <a href="">Docs</a>
         </p>
-        <p>
+        <p className={s.terms}>
           <a href="">Terms of Service</a>
           <a href="">Privacy Policy</a>
         </p>

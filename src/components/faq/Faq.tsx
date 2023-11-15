@@ -1,4 +1,5 @@
 import { FC } from "react";
+import s from './Faq.module.css';
 import { FaqItem } from "./faq-item/FaqItem";
 
 interface IFaq {
@@ -39,17 +40,17 @@ const faqData: IFaq[] = [
 
 export const Faq: FC = () => {
   return (
-    <>
-      <div>
-        <div>
+    
+      <div className={s.wrapper}>
+        <div className={s.title}>
           <p>Faq</p>
         </div>
-        <div>
+        <div className={s.content}>
           {faqData.map((item, index) => (
             <FaqItem title={item.title} text={item.text} />
           ))}
         </div>
       </div>
-    </>
+    
   );
 };
