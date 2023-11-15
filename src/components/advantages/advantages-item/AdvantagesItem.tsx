@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import s from './AdvantagesItem.module.css';
 interface IAdvantagesItem {
   title: string;
   image:string
@@ -10,9 +10,9 @@ interface IAdvantagesItem {
 export const AdvantagesItem : FC<IAdvantagesItem> = ({title, image}) => {
   return (
     <>
-        <div>
-          <div><img src={image} alt="" /></div>
-          <div><p>{title}</p></div>
+        <div className={s.wrapper}>
+          <div className={s.icon}><span><img src={image} alt="" /></span></div>
+          <div className={s.title}><p>{title}</p></div>
         </div>
 
     </>

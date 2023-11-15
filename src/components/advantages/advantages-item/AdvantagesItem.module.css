@@ -1,0 +1,40 @@
+.wrapper{
+    border-radius: 20px;
+    background: #0000000A;
+    padding: 16px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon{
+    background: #FDFDFD;
+    display: inline-block;
+    border-radius: 50%;
+    width: 82px;
+    height: 82px;
+    position: relative;
+    margin-bottom: 19px;
+}
+
+.icon span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon span img{
+    height: 55px;
+}
+.title{
+font-size: 28px;
+font-weight: 500;
+line-height: 34px;
+letter-spacing: -0.03em;
+
+
+}

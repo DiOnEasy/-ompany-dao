@@ -40,4 +40,15 @@
     display: flex;
     align-items: center;
 column-gap: 4px;
+position: relative;
+}
+
+.navbar a:last-child::after {
+    position: absolute;
+    top: -0.5px; bottom: -0.5px;
+    left: -0.5px; right: -0.5px;
+    background: linear-gradient( #4A4A4A 0%, #FFFFFF 52.63%, #4A4A4A 100%);
+    content: '';
+    z-index: -1;
+    border-radius: 8px;
 }

@@ -1,5 +1,5 @@
 import { AdvantagesItem } from "./advantages-item/AdvantagesItem";
-
+import s from './Advantages.module.css';
 interface IAdvantages {
   title: string;
 }
@@ -18,7 +18,7 @@ const advantagesData: IAdvantages[] = [
 export const Advantages = () => {
   return (
     <>
-    <div>
+    <div className={s.wrapper}>
      {advantagesData.map((item, index) =>(
       <AdvantagesItem title={item.title} image={`/img/advantages/advantages-${index+1}.svg`}/>
      ))}
