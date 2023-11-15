@@ -1,6 +1,6 @@
 import { FC } from "react";
+import s from './Tokenization.module.css';
 import { TokenizationContent } from "./tokenization-content/TokenizationContent";
-
 export interface ITokenization {
   image: string;
   titles: string[];
@@ -27,18 +27,18 @@ const TokenizationData: ITokenization[] = [
 
 export const Tokenization: FC = () => {
   return (
-    <>
-      <div>
-        <div>
+    
+      <div className={s.wrapper}>
+        <div className={s.title}>
           <p>Tokenization Platform as a Service</p>
         </div>
-        <div>
+        <div className={s.navbar}>
           <span>Token Offerings</span>
           <span>Treasury Management</span>
           <span>Governance</span>
           <span>Business Administration</span>
         </div>
-        <div>
+        <div className={s.content}>
           <TokenizationContent
             image="/img/tokenization/tokenization-1.png"
             titles={TokenizationData[0].titles}
@@ -46,6 +46,6 @@ export const Tokenization: FC = () => {
           />
         </div>
       </div>
-    </>
+    
   );
 };
