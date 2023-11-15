@@ -23,6 +23,7 @@
 .navbar a {
     color: #535353;
     text-decoration: none;
+    letter-spacing: -0.03em;
 }
 
 .navbar a:nth-child(1) {
