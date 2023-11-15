@@ -1,0 +1,25 @@
+
+.wrapper{
+    padding-top: 180px;
+}
+
+.title{
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    border-bottom: 1px solid #0000001A;
+    padding-bottom: 32px;
+    
+}
+
+.content{
+    padding-top: 40px;
+}
+
+.buttons{
+    margin-left: 40px;
+    display: flex;
+    column-gap: 7px;
+}

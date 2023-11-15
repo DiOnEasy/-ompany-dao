@@ -1,5 +1,8 @@
 import { Button } from "../../ui/button/Button";
-import { HowItWorksItem } from "./how-it-works-item.tsx/HowItWorksItem";
+import { HowItWorksItem } from "./how-it-works-item/HowItWorksItem";
+import s from './HowItWorks.module.css';
+
+
 interface IHowItWorks {
   title: string;
   text: string;
@@ -26,20 +29,18 @@ const howItWorksItemData: IHowItWorks[] = [
 export const HowItWorks = () => {
   return (
     <>
-      <div>
-        <div>
+      <div className={s.wrapper}>
+        <div className={s.title}>
           <p>How it works</p>
         </div>
-        <div>
+        <div className={s.content}>
         {howItWorksItemData.map((item, index) => (
-          <div>
-            <HowItWorksItem title={item.title} text={item.text}/>
-          </div>
+            <HowItWorksItem title={item.title} text={item.text} index={index}/>
         ))}
         </div>
-        <div>
-          <Button title="Tokenization Guide" icon='/img/hat.svg'/>
-          <Button title="Legal Opinion" icon='/img/book.svg'/>
+        <div className={s.buttons}>
+          <Button title="Tokenization Guide" icon='/img/book.svg'/>
+          <Button title="Legal Opinion" icon='/img/hat.svg'/>
         </div>
       </div>
     </>
