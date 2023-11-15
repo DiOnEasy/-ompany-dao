@@ -1,5 +1,8 @@
 
-.wrapper{
+.content{
     max-width: 1045px;
     margin: 0 auto;
+}
+.wrapper{
+    padding:12px 0 0px ;
 }

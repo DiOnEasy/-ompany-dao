@@ -1,0 +1,42 @@
+.wrapper {
+    padding: 10px 16px;
+    background: #D4D4D44D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.navbar a {
+    color: #535353;
+    text-decoration: none;
+}
+
+.navbar a:nth-child(1) {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.navbar a:last-child {
+    color: #CCCCCC;
+    background: linear-gradient(180deg, #1E1E1E 0%, #262626 100%);
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+column-gap: 4px;
+}

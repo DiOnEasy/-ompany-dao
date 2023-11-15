@@ -11,8 +11,8 @@ import s from './Home.module.css'
 
 export const Home = () =>{
     return(
-        <div>
-            <div className={s.wrapper}>
+        <div className={s.wrapper} >
+            <div className={s.content}>
                 <Header/>
                 <Advantages/>
                 <HowItWorks/>

@@ -1,12 +1,17 @@
+import s from './HeaderNav.module.css';
+
+
+
+
 export const HeaderNav = () => {
     return (
-      <>
-        <div>
-          <div>
+      
+        <div className={s.wrapper}>
+          <div className={s.logo}>
             <p>Company</p>
-            <span><img src="/img/logo.svg" alt="" /></span>
+            <img src="/img/logo.svg" alt="" />
           </div>
-          <div>
+          <div className={s.navbar}>
             <a href=""><img src="/img/youtube.svg" alt="" />Watch Demo</a>
             <a href="">Telegram</a>
             <a href="">Twitter</a>
@@ -15,7 +20,7 @@ export const HeaderNav = () => {
             <a href="">Enter App <img src="/img/small-arrow-right.svg" alt="" /></a>
           </div>
         </div>
-      </>
+      
     );
   };
   
