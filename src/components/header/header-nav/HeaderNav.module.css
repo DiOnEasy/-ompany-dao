@@ -1,23 +1,18 @@
 .wrapper {
-    padding: 10px 16px;
+    padding: 5px 16px;
     background: #D4D4D44D;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 8px;
-    backdrop-filter: blur(10px); /* Это значение определяет силу размытия */
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 1045px;
     box-sizing: border-box;
     z-index: 999;
 }
-   
-/* .header{
-    position: fixed;
-    width: 100%;
-    max-width: 1045px;
-    z-index: 999;
-} */
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -43,27 +38,76 @@
     column-gap: 4px;
 }
 
-.navbar a:last-child {
+.navbar .navbar__button {
     color: #CCCCCC;
     background: linear-gradient(180deg, #1E1E1E 0%, #262626 100%);
     padding: 6px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-column-gap: 4px;
-position: relative;
+    column-gap: 4px;
+    position: relative;
 }
 
-.navbar a:last-child::after {
+.navbar .navbar__button::after {
     position: absolute;
-    top: -0.5px; bottom: -0.5px;
-    left: -0.5px; right: -0.5px;
-    background: linear-gradient( #4A4A4A 0%, #FFFFFF 52.63%, #4A4A4A 100%);
+    top: -0.5px;
+    bottom: -0.5px;
+    left: -0.5px;
+    right: -0.5px;
+    background: linear-gradient(#4A4A4A 0%, #FFFFFF 52.63%, #4A4A4A 100%);
     content: '';
     z-index: -1;
     border-radius: 8px;
 }
 
+.burger {
+    width: 31px;
+    height: 28px;
+    background: #e2e2e2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2px;
+    justify-content: center;
+}
+
+.burger div {
+    height: 1px;
+    width: 19px;
+    background: #000;
+    border-radius: 8px;
+    position: relative;
+}
+
+.mobile__menu {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height:0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background: #d4d4d4f4;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.active {
+    padding: 15px;
+    height: calc(100vh - 54px);
+    transition: all 1s ease-in-out;
+    opacity: 1;
+    display: flex;
+}
+
 @media (max-width: 1280px) {
-    .wrapper{width: 94%;}
+    .wrapper {
+        width: 94%;
+    }
 }
