@@ -1,17 +1,18 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import s from "./FaqItem.module.css";
 
 interface IFaqItem {
   title: string;
   text: string;
   index: number;
+  shown: any;
+  setShown: any;
 }
 
-export const FaqItem: FC<IFaqItem> = ({ title, text, index }) => {
-  const [shown, setShown] = useState(null);
+export const FaqItem: FC<IFaqItem> = ({ shown, setShown, title, text, index }) => {
 
   const toggleShown = (index: any) => {
-    setShown((prevIndex) => (prevIndex === index ? null : index));
+    setShown((prevIndex:any) => (prevIndex === index ? null : index));
   };
 
   return (
@@ -25,10 +26,10 @@ export const FaqItem: FC<IFaqItem> = ({ title, text, index }) => {
         <span>{title}</span>
         <span>
           <div className={s.line}></div>
-          {!shown && <div className={s.line}></div>}
+          {shown != index + 1 && <div className={s.line}></div>}
         </span>
       </p>
-      {shown && <p className={s.text}>{text}</p>}
+      {shown == index + 1 && <p className={s.text}>{text}</p>}
     </div>
   );
 };

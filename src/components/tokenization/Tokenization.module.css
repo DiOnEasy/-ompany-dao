@@ -28,4 +28,10 @@ line-height: 30px;
 letter-spacing: -0.03em;
 text-align: left;
 color: #808080;
+cursor: pointer;
+user-select: none;
+}
+
+.selected{
+    border-bottom: 3px solid black;
 }

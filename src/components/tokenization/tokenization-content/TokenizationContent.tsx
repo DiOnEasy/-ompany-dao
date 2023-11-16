@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button } from "../../../ui/button/Button";
-import { ITokenization } from "../Tokenization";
+import { ITokenization } from "../tokenization.data";
 import s from "./TokenizationContent.module.css";
 export const TokenizationContent: FC<ITokenization> = ({
   image,

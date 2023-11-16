@@ -1,44 +1,13 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import s from './Faq.module.css';
 import { FaqItem } from "./faq-item/FaqItem";
+import { faqData } from "./faq.data";
 
-interface IFaq {
-  title: string;
-  text: string;
-}
 
-const faqData: IFaq[] = [
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    title: "What is Lorem Ipsum?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-];
 
 export const Faq: FC = () => {
+  const [shown, setShown] = useState(null);
+
   return (
     
       <div className={s.wrapper}>
@@ -47,7 +16,7 @@ export const Faq: FC = () => {
         </div>
         <div className={s.content}>
           {faqData.map((item, index) => (
-            <FaqItem title={item.title} text={item.text} index={index}/>
+            <FaqItem shown={shown} setShown={setShown} title={item.title} text={item.text} index={index}/>
           ))}
         </div>
       </div>

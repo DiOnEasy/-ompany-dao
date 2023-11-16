@@ -5,8 +5,8 @@ import s from './HeaderNav.module.css';
 
 export const HeaderNav = () => {
     return (
-      
-        <div className={s.wrapper}>
+      // <div className={s.header}>
+          <div className={s.wrapper}>
           <div className={s.logo}>
             <p>Company</p>
             <img src="/img/logo.svg" alt="" />
@@ -20,6 +20,8 @@ export const HeaderNav = () => {
             <a href="">Enter App <img src="/img/small-arrow-right.svg" alt="" /></a>
           </div>
         </div>
+      
+      // </div>
       
     );
   };
