@@ -1,37 +1,56 @@
-.wrapper{
+.wrapper {
     padding: 180px 0 0 0;
 }
-.title{
-font-size: 64px;
-font-weight: 500;
-line-height: 64px;
-letter-spacing: -0.05em;
-text-align: left;
-padding-bottom: 32px;
-border-bottom: 1px solid #0000001A;
+
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #0000001A;
 
 }
 
-.navbar{
+.navbar {
     border-bottom: 1px solid #0000001A;
     display: flex;
     align-items: center;
     column-gap: 41px;
+    white-space: nowrap;
+    overflow-x: scroll;
 }
 
-.navbar span{
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    scrollbar-width: none;
+    /* скрываем ширину скроллбара */
+}
+
+.navbar span {
     padding: 22px 0;
     display: inline-block;
-font-size: 25px;
-font-weight: 500;
-line-height: 30px;
-letter-spacing: -0.03em;
-text-align: left;
-color: #808080;
-cursor: pointer;
-user-select: none;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #808080;
+    cursor: pointer;
+    user-select: none;
+
 }
 
-.selected{
+.selected {
     border-bottom: 3px solid black;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        column-gap: 20px;
+    }
 }

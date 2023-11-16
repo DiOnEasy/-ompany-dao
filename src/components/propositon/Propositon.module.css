@@ -13,11 +13,18 @@
     margin-bottom: 50px;
 }
 
-.content{
+.content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 33px;
     padding-bottom: 91px;
     border-bottom: 1px solid #0000001A;
 
+}
+
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

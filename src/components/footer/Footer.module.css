@@ -112,3 +112,18 @@
     color: #000000B2;
     text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+ 
+    .contacts{
+        gap: 0;
+        width: 50%;
+    }
+    .contacts img{
+        display: none;
+    }
+    .links{
+        width: 50%;
+        padding: 46px;
+    }
+}

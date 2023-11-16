@@ -47,7 +47,17 @@
     z-index: -1;
 }
 
-
+.wrapper:last-child .number::after {
+    content: '';
+    height: 280px;
+    background-color: #b3b3b3;
+    width: 2px;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 1px);
+    transform: translate(0, -100%);
+    z-index: -1;
+}
 .text p:nth-child(1) {
     font-size: 34px;
     font-weight: 600;
