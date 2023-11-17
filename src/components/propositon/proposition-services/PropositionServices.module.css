@@ -30,26 +30,51 @@
     line-height: 24px;
     letter-spacing: -0.5px;
     column-gap: 4px;
-   
+
 
 }
 
 @media (max-width: 1024px) {
-    .wrapper{
+    .wrapper {
         column-gap: 0;
         justify-content: space-around;
     }
 }
 
 @media (max-width: 640px) {
-    .wrapper{
+    .wrapper {
         flex-direction: column;
         row-gap: 12px;
 
     }
-    .wrapper div{
+
+    .wrapper div {
         display: flex;
         justify-content: space-between;
     }
+
+}
+
+@media (max-width: 480px) {
+    .wrapper{
+        padding: 24px 0;
+    }
+    .wrapper div p:nth-child(1) {
+        width: 42%;
+        font-size: 18px;
+        margin-right: 22px;
+        white-space: nowrap;
+
+    }
+
+    .wrapper div p:nth-child(2) {
+        white-space: nowrap;
+        column-gap: 4px;
+    }
    
+
+    .wrapper div {
+        justify-content: flex-start;
+        align-items: center;
+    }
 }

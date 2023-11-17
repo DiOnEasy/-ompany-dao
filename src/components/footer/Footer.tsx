@@ -25,22 +25,22 @@ export const Footer = () => {
         </div>
         {!isPhone ? (
           <div className={s.contacts__text}>
-            <p>
+            <p className={s.address}>
               Delta Alpha Omega DAO LLC
               <br /> 1531 Bellaire St, Denver, CO, 80220, USA
             </p>
-            <p>email@companydao.org</p>
-            <p>
+            <p className={s.email}><a href="">email@companydao.org</a></p>
+            <p className={s.phone__number}>
               Telegram, WhatsApp: <span>+1 307 217-3127</span>
             </p>
           </div>
         ) : (
           <div className={s.contacts__mobile}>
-            <p>
+            <p className={s.phone__number}>
               Telegram, WhatsApp: <span>+1 307 217-3127</span>
             </p>
-            <p>Send an email: <span>email@companydao.org</span></p>
-            <p>
+            <p className={s.email}>Send an email: <span><a href="">email@companydao.org</a></span></p>
+            <p className={s.address}>
               Delta Alpha Omega DAO LLC
               <br /> 1531 Bellaire St, Denver, CO, 80220, USA
             </p>
@@ -48,9 +48,10 @@ export const Footer = () => {
         )}
       </div>
       <div className={s.links}>
-        <p>
+        {!isPhone && <p>
           <a href="">More</a>
-        </p>
+        </p>}
+        
         <p>
           <a href="">Legal Opinion</a>
         </p>

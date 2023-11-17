@@ -26,25 +26,6 @@ export const TokenizationContent: FC<ITokenization> = ({
   return (
     <div className={s.wrapper}>
       <div className={s.content}>
-        {isTablet && (
-          <div className={s.tokenization__buttons}>
-            <Button title="Book a demo" icon="/img/calendar.svg" />
-            <button onClick={() => setView(!view)}>
-              {!view ? (
-                <>
-                  <span>View</span>
-                  <span>
-                    <img src="/img/tokenization/show__icon.svg" alt="" />
-                  </span>
-                </>
-              ) : (
-                <>
-                  <img src="/img/tokenization/hide__icon.svg" alt="" />
-                </>
-              )}
-            </button>
-          </div>
-        )}
         {(!isTablet || view) && (
           <div className={s.image}>
             <img src={image} alt="" />
@@ -61,8 +42,32 @@ export const TokenizationContent: FC<ITokenization> = ({
             {!isTablet && (
               <div className={s.button}>
                 <Button title="Book a demo" icon="/img/calendar.svg" />
+                <Button title="Submit a request" icon="/img/request.svg" />
               </div>
             )}
+          </div>
+        )}
+        {isTablet && (
+          <div className={s.tokenization__buttons}>
+            <div className={s.button}>
+              <Button title="Book a demo" icon="/img/calendar.svg" />
+              <Button title="Submit a request" icon="/img/request.svg" />
+            </div>
+
+            <button onClick={() => setView(!view)}>
+              {!view ? (
+                <>
+                  <span>View</span>
+                  <span>
+                    <img src="/img/tokenization/show__icon.svg" alt="" />
+                  </span>
+                </>
+              ) : (
+                <>
+                  <img src="/img/tokenization/hide__icon.svg" alt="" />
+                </>
+              )}
+            </button>
           </div>
         )}
       </div>

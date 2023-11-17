@@ -43,7 +43,11 @@
 }
 
 .button {
-    display: inline-block;
+    display: flex;
+    column-gap: 5px;
+}
+.tokenization__buttons button span{
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -84,5 +88,31 @@
     }
     .item p:nth-child(1){
         font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .button {
+    flex-direction: column;
+    row-gap: 5px;
+    }
+    .tokenization__buttons button{
+        height: calc(50% - 5px);
+        padding: 12px 16px;
+    }
+}
+@media (max-width: 480px) {
+    .wrapper{
+        margin-top: 28px;
+    }
+    
+    .item p:nth-child(1){
+        font-size: 22px;
+    }
+    .item p:nth-child(2){
+        font-size: 15px;
+    }
+    .item{
+        margin-bottom: 20px;
     }
 }

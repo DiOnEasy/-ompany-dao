@@ -13,22 +13,23 @@
     justify-content: space-between;
     padding-right: 4px;
     cursor: pointer;
-    
+
 }
 
-.title span:nth-child(2){
+.title span:nth-child(2) {
     position: relative;
     display: flex;
     align-items: center;
 }
-.line:nth-child(1){
+
+.line:nth-child(1) {
     height: 2px;
     width: 24px;
     background: #000000E5;
     border-radius: 8px
 }
 
-.line:nth-child(2){
+.line:nth-child(2) {
     width: 2px;
     height: 24px;
     background: #000000E5;
@@ -44,18 +45,25 @@
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0px;
-    
+
 }
 
 @media (max-width: 768px) {
-    .title{
+    .title {
         font-size: 22px;
     }
-    .line:nth-child(1){
+
+    .line:nth-child(1) {
         width: 20px;
     }
-    
-    .line:nth-child(2){
+
+    .line:nth-child(2) {
         height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 15px;
     }
 }

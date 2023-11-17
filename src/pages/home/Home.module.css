@@ -19,3 +19,10 @@
         width: 94%;
     }
 }
+
+@media (max-width: 640px) {
+    .wrapper{
+        padding: 12px 4% 0;
+        width: 92%;
+    }
+}

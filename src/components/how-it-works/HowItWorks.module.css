@@ -1,9 +1,8 @@
-
-.wrapper{
+.wrapper {
     padding-top: 180px;
 }
 
-.title{
+.title {
     font-size: 64px;
     font-weight: 500;
     line-height: 64px;
@@ -11,14 +10,14 @@
     text-align: left;
     border-bottom: 1px solid #0000001A;
     padding-bottom: 32px;
-    
+
 }
 
-.content{
+.content {
     padding-top: 40px;
 }
 
-.buttons{
+.buttons {
     margin-left: 40px;
     display: flex;
     column-gap: 7px;
@@ -26,7 +25,40 @@
 }
 
 @media (max-width:768px) {
-    .title{
+    .title {
         font-size: 40px;
+    }
+}
+
+@media (max-width:480px) {
+    .wrapper {
+        padding-top: 100px;
+    }
+
+    .title {
+        padding-bottom: 14px;
+    }
+
+    .content {
+        padding-top: 22px;
+        margin-bottom: 24px;
+    }
+
+    .buttons {
+        margin-left: 0;
+    }
+
+    .buttons div:nth-child(1){
+        width: 53%;
+        white-space: nowrap;
+    }
+    .buttons div:nth-child(2){
+        width: 47%;
+        white-space: nowrap;
+    }
+    .buttons div a{
+        font-size: 16px;
+        justify-content: space-between;
+
     }
 }

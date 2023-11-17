@@ -17,7 +17,7 @@
     padding-top: 10px;
 }
 
-.contacts__text p:nth-child(1) {
+.contacts__text .address {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -25,7 +25,7 @@
     margin-bottom: 28px;
 }
 
-.contacts__text p:nth-child(2) {
+.contacts__text .email {
     font-family: Inter;
     font-size: 17px;
     font-weight: 400;
@@ -41,7 +41,7 @@
 
 }
 
-.contacts__text p:nth-child(3) {
+.contacts__text .phone__number {
 
 
     font-size: 12px;
@@ -52,7 +52,7 @@
 
 }
 
-.contacts__text p:nth-child(3) span {
+.contacts__text .phone__number span {
     font-weight: 700;
 
 }
@@ -113,6 +113,42 @@
     text-decoration: none;
 }
 
+.contacts__mobile .phone__number,
+.contacts__mobile .email {
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+}
+
+.contacts__mobile .phone__number {
+    margin-bottom: 2px;
+}
+
+.contacts__mobile .phone__number span,
+.contacts__mobile .email span {
+    font-weight: 700;
+
+}
+
+.contacts__mobile .address {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    margin-top: 16px;
+
+}
+
+.email a{
+    text-decoration: none;
+
+color: #000000;
+}
+
+
 @media (max-width: 1024px) {
     .wrapper {
         padding-bottom: 100px;
@@ -142,11 +178,48 @@
 }
 
 @media (max-width: 640px) {
-    .wrapper{
+    .wrapper {
         flex-direction: column;
         row-gap: 6px;
     }
-    .wrapper div{
-        width: 94%;
+
+    .wrapper div {
+        width: calc(100% - 40px);
+    }
+
+    .links p:nth-child(1) a,
+    .links p:nth-child(2) a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+
+    }
+
+    .links p:nth-child(1) {
+        margin-bottom: 2px;
+    }
+
+    .links p:nth-child(2) {
+        margin-bottom: 16px;
+    }
+
+    .links p.terms a {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+
+    }
+
+    .links p:nth-child(3) {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 100px 0 20px;
+
     }
 }

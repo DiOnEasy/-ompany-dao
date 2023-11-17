@@ -9,9 +9,15 @@ line-height: 64px;
 letter-spacing: -0.05em;
 padding-bottom: 32px;
 border-bottom: 1px solid #0000001A;
+text-transform: uppercase;
 }
 @media (max-width: 768px) {
     .title{
         font-size: 40px;
+        line-height: 40px;
+    }
+    .wrapper{
+        padding-top: 100px;
     }
 }
+

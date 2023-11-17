@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .item {
@@ -58,6 +58,7 @@
     transform: translate(0, -100%);
     z-index: -1;
 }
+
 .text p:nth-child(1) {
     font-size: 34px;
     font-weight: 600;
@@ -78,10 +79,33 @@
 }
 
 @media (max-width: 768px) {
-    .text p:nth-child(1){
+    .text p:nth-child(1) {
         font-size: 24px;
     }
-    .text p:nth-child(2){
+
+    .text p:nth-child(2) {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text p:nth-child(1) {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+
+    .text p:nth-child(2) {
+        font-size: 15px;
+        line-height: 19.5px;
+    }
+
+    .number span {
+        width: 24px;
+        height: 24px;
+        font-size: 22px;
+    }
+    .wrapper:first-child .number::after, .wrapper:last-child .number::after{
+        left: 50%;
+
     }
 }

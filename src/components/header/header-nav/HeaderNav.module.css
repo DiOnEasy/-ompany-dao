@@ -111,3 +111,9 @@
         width: 94%;
     }
 }
+
+@media (max-width: 640px) {
+    .wrapper{
+        width: 92%;
+    }
+}
