@@ -40,3 +40,16 @@
         justify-content: space-around;
     }
 }
+
+@media (max-width: 640px) {
+    .wrapper{
+        flex-direction: column;
+        row-gap: 12px;
+
+    }
+    .wrapper div{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+}

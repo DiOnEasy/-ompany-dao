@@ -114,16 +114,39 @@
 }
 
 @media (max-width: 1024px) {
- 
-    .contacts{
+    .wrapper {
+        padding-bottom: 100px;
+    }
+
+    .contacts {
         gap: 0;
         width: 50%;
     }
-    .contacts img{
+
+    .contacts div:nth-child(1) {
         display: none;
     }
-    .links{
+
+    .links {
         width: 50%;
         padding: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contacts,
+    .links {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper{
+        flex-direction: column;
+        row-gap: 6px;
+    }
+    .wrapper div{
+        width: 94%;
     }
 }

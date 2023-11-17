@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import s from "./HeaderNav.module.css";
 
 export const HeaderNav = () => {
-  const [isTablet, setIsTablet] = useState(true);
+  const [isTablet, setIsTablet] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
@@ -13,6 +13,7 @@ export const HeaderNav = () => {
         setIsTablet(false);
       }
     };
+    handleResize()
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

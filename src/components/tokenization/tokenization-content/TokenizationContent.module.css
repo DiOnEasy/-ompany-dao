@@ -1,46 +1,88 @@
-.wrapper{
+.wrapper {
     margin-top: 47px;
     padding: 13px 0 38px;
     background: #f5f5f5;
     border-radius: 20px;
 }
 
-.content{
+.content {
     display: flex;
     max-width: 850px;
     margin: 0 auto;
     column-gap: 88px;
 }
 
-.text{
+.text {
     padding-top: 25px;
 }
 
-.item{
+.item {
     margin-bottom: 30px;
 }
 
-.item:nth-child(4){
+.item:nth-child(4) {
     margin-bottom: 20px;
 }
 
-.item p:nth-child(1){
-font-size: 28px;
-font-weight: 600;
-line-height: 34px;
-letter-spacing: -0.04em;
-text-align: left;
-margin-bottom: 4px;
-}
-.item p:last-child{
-font-size: 17px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: -0.4px;
-text-align: left;
-color: #4a4a4a;
+.item p:nth-child(1) {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin-bottom: 4px;
 }
 
-.button{
+.item p:last-child {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #4a4a4a;
+}
+
+.button {
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 12px 12px 22px;
+    }
+
+    .tokenization__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tokenization__buttons button {
+        background: #e2e2e2;
+        border: none;
+        padding: 14px 16px;
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .tokenization__buttons button span:nth-child(2) {
+        padding-top: 5px;
+    }
+
+    .image {
+        margin: 0 auto;
+    }
+
+    .text {
+        padding-top: 20px;
+    }
+    .item p:nth-child(1){
+        font-size: 24px;
+    }
 }

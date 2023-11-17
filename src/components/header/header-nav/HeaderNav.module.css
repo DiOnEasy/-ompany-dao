@@ -94,14 +94,14 @@
     background: #d4d4d4f4;
     border-radius: 8px;
     font-weight: 500;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     overflow: hidden;
 }
 
 .active {
     padding: 15px;
     height: calc(100vh - 54px);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     opacity: 1;
     display: flex;
 }

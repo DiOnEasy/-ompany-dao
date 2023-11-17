@@ -31,3 +31,9 @@ letter-spacing: 0px;
 color: #000000B2;
 
 }
+
+@media (max-width: 768px) {
+    .text p:nth-child(1){
+        font-size: 20px;
+    }
+}
