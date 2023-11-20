@@ -12,11 +12,11 @@ export const HeaderContent = () => {
           your business with token incentives
         </div>
         <div className={s.buttons}>
-          <div className={s.button}>
+          <div className={`${s.button} ${s.button__white}`}>
             <a className={s.demo__link} href="">
               <span>Book a demo</span>
               <span>
-                <img src="/img/calendar.svg" alt="" />
+                <img src="/img/calendar-black.svg" alt="" />
               </span>
             </a>
           </div>

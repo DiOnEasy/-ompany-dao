@@ -39,8 +39,8 @@ export const HowItWorks = () => {
         ))}
         </div>
         <div className={s.buttons}>
-          <Button title="Tokenization Guide" icon='/img/book.svg'/>
-          <Button title="Legal Opinion" icon='/img/hat.svg'/>
+          <Button title="Tokenization Guide" icon='/img/book.svg' link=""/>
+          <Button title="Legal Opinion" icon='/img/hat.svg' link=""/>
         </div>
       </div>
     </>
