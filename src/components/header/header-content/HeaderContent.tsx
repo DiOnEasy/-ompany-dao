@@ -12,19 +12,19 @@ export const HeaderContent = () => {
           your business with token incentives
         </div>
         <div className={s.buttons}>
-          <div className={`${s.button} ${s.button__white}`}>
-            <a className={s.demo__link} href="">
+          <div className={s.button}>
+            <a  href="">
               <span>Book a demo</span>
               <span>
-                <img src="/img/calendar-black.svg" alt="" />
+                <img src="/img/calendar.svg" alt="" />
               </span>
             </a>
           </div>
-          <div className={s.button}>
+          <div className={`${s.button} ${s.button__white}`}>
             <a href="">
               <span>Enter App</span>
-              <span>
-                <img src="/img/arrow-right.svg" alt="" />
+              <span >
+                <img src="/img/arrow-right-black.svg" alt="" />
               </span>
             </a>
           </div>
