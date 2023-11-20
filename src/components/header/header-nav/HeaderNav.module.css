@@ -55,7 +55,7 @@
     bottom: -0.5px;
     left: -0.5px;
     right: -0.5px;
-    background: linear-gradient(#4A4A4A 0%, #FFFFFF 52.63%, #4A4A4A 100%);
+    background: radial-gradient(273.57% 271.65% at 153.12% -133.36%, #4A4A4A 0%, #FFFFFF 52.63%, #4A4A4A 100%);
     content: '';
     z-index: -1;
     border-radius: 8px;

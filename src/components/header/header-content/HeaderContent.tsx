@@ -1,5 +1,4 @@
-import s from './HeaderContent.module.css';
-
+import s from "./HeaderContent.module.css";
 
 export const HeaderContent = () => {
   return (
@@ -12,11 +11,23 @@ export const HeaderContent = () => {
           Access capital, unlock liquidity, enable fractional ownership and grow
           your business with token incentives
         </div>
-        <div className={s.button}>
-          <a href="">
-            <span>Enter App</span>
-            <span><img src="/img/arrow-right.svg" alt="" /></span>
-          </a>
+        <div className={s.buttons}>
+          <div className={s.button}>
+            <a className={s.demo__link} href="">
+              <span>Book a demo</span>
+              <span>
+                <img src="/img/calendar.svg" alt="" />
+              </span>
+            </a>
+          </div>
+          <div className={s.button}>
+            <a href="">
+              <span>Enter App</span>
+              <span>
+                <img src="/img/arrow-right.svg" alt="" />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </>
