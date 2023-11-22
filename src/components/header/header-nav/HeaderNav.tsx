@@ -39,7 +39,7 @@ export const HeaderNav = () => {
           </>
         )}
 
-        <a className={s.navbar__button} href="">
+        <a className={s.navbar__button} href="https://app.companydao.org/">
           Enter App <img src="/img/small-arrow-right.svg" alt="" />
         </a>
         {isTablet && (

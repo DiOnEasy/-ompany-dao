@@ -53,14 +53,14 @@ export const Footer = () => {
         </p>}
         
         <p>
-          <a href="">Legal Opinion</a>
+          <a target="_blank"  href="https://companydao.org/WY%20DAO%20Memorandum%20for%20Website%20on%20HB%20Letterhead%20(2.15.2023).pdf">Legal Opinion</a>
         </p>
         <p>
-          <a href="">Docs</a>
+          <a target="_blank"  href="https://doc.companydao.org/company-as-a-service/introduction/what-is-company-dao">Docs</a>
         </p>
         <p className={s.terms}>
-          <a href="">Terms of Service</a>
-          <a href="">Privacy Policy</a>
+          <a target="_blank"  href="https://doc.companydao.org/company-as-a-service/legal-docs/terms-of-service">Terms of Service</a>
+          <a target="_blank"  href="https://doc.companydao.org/company-as-a-service/legal-docs/privacy-policy">Privacy Policy</a>
         </p>
       </div>
     </div>
