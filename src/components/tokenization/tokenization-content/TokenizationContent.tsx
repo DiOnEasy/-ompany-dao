@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import modalStore from "../../../store/modal/modal.store";
 import { Button } from "../../../ui/button/Button";
 import { ITokenization } from "../tokenization.data";
 import s from "./TokenizationContent.module.css";
@@ -23,6 +24,11 @@ export const TokenizationContent: FC<ITokenization> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const {
+    initialState: { shown },
+    setShown,
+  } = modalStore;
+
   return (
     <div className={s.wrapper}>
       <div className={s.content}>
@@ -34,19 +40,23 @@ export const TokenizationContent: FC<ITokenization> = ({
         {(!isTablet || !view) && (
           <div className={s.text}>
             <div className={s.text__content}>
-
-          
-            {titles.map((title, index) => (
-              <div className={s.item}>
-                <p>{title}</p>
-                <p>{texts[index]}</p>
-              </div>
-            ))}
-              </div>
+              {titles.map((title, index) => (
+                <div className={s.item}>
+                  <p>{title}</p>
+                  <p>{texts[index]}</p>
+                </div>
+              ))}
+            </div>
             {!isTablet && (
               <div className={s.button}>
                 <Button title="Book a demo" icon="/img/calendar.svg" link="" />
-                <Button title="Submit a request" icon="/img/request.svg" link="" />
+                <div onClick={() => setShown(true)}>
+                  <Button
+                    title="Submit a request"
+                    icon="/img/request.svg"
+                    link=""
+                  />
+                </div>
               </div>
             )}
           </div>
@@ -55,7 +65,13 @@ export const TokenizationContent: FC<ITokenization> = ({
           <div className={s.tokenization__buttons}>
             <div className={s.button}>
               <Button title="Book a demo" icon="/img/calendar.svg" link="" />
-              <Button title="Submit a request" icon="/img/request.svg" link="" />
+              <div onClick={() => setShown(true)}>
+                <Button
+                  title="Submit a request"
+                  icon="/img/request.svg"
+                  link=""
+                />
+              </div>
             </div>
 
             <button onClick={() => setView(!view)}>
