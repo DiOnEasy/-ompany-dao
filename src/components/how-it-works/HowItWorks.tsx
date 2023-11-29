@@ -39,8 +39,8 @@ export const HowItWorks = () => {
         ))}
         </div>
         <div className={s.buttons}>
-          <Button title="Tokenization Guide" icon='/img/book.svg' link=""/>
-          <Button title="Legal Opinion" icon='/img/hat.svg' link=""/>
+          <Button title="Tokenization Guide" icon='/img/book.svg' link="https://drive.google.com/file/d/1VL4qVe7FzE1h7LNSofBG474qcZ7XZCVf/view?usp=sharing"/>
+          <Button title="Legal Opinion" icon='/img/hat.svg' link="https://companydao.org/WY%20DAO%20Memorandum%20for%20Website%20on%20HB%20Letterhead%20(2.15.2023).pdf"/>
         </div>
       </div>
     </>

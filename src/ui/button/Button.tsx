@@ -10,7 +10,8 @@ export const Button: FC<buttonData> = ({ title, icon, link }) => {
   return (
     <div className={s.wrapper}>
       {link ? (
-        <a href={link}>
+        <a target="_blank"  href={link}>
+
           <span> {title} </span>
           <img src={icon} alt="" />
         </a>

@@ -13,10 +13,8 @@ export const ModalWrapper = observer(() => {
   } = modalStore;
 
   useEffect(() => {
-    // При открытии модального окна убираем скролл
-    document.body.style.overflow = 'hidden';
+      //document.body.style.overflow = 'hidden';
 
-    // При закрытии модального окна восстанавливаем скролл
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -24,10 +22,10 @@ export const ModalWrapper = observer(() => {
 
 
   const handleClick = (e: MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      setShown(false);
-      setSubmitted(false);
-    }
+    // if (e.target === e.currentTarget) {
+    //   setShown(false);
+    //   setSubmitted(false);
+    // }
   };
   return (
     <div onClick={handleClick} className={s.modal__wrapper}>

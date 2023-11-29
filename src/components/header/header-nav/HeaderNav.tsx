@@ -21,25 +21,25 @@ export const HeaderNav = () => {
   return (
     // <div className={s.header}>
     <div className={s.wrapper}>
-      <div className={s.logo}>
-        <p>Company</p>
+      <a href="/" className={s.logo}>
+       
         <img src="/img/logo.svg" alt="" />
-      </div>
+      </a>
       <div className={s.navbar}>
         {!isTablet && (
           <>
-            <a href="">
+            <a target="_blank" href="https://www.youtube.com/@CompanyDAO">
               <img src="/img/youtube.svg" alt="" />
               Watch Demo
             </a>
-            <a href="">Telegram</a>
-            <a href="">Twitter</a>
-            <a href="">Medium</a>
-            <a href="">Get in touch</a>
+            <a target="_blank" href="https://t.me/company_dao">Telegram</a>
+            <a target="_blank" href="https://twitter.com/company_dao">Twitter</a>
+            <a target="_blank" href="https://medium.com/@CompanyDAO">Medium</a>
+            <a target="_blank" href="https://calendly.com/companydao/intro">Get in touch</a>
           </>
         )}
 
-        <a className={s.navbar__button} href="">
+        <a className={s.navbar__button} href="https://app.companydao.org/">
           Enter App <img src="/img/small-arrow-right.svg" alt="" />
         </a>
         {isTablet && (
@@ -57,20 +57,20 @@ export const HeaderNav = () => {
                 mobileMenu == true ? s.active : ""
               }`}
             >
-              <a onClick={() => setMobileMenu(!mobileMenu)} href="">
+              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://www.youtube.com/@CompanyDAO">
                 <img src="/img/youtube.svg" alt="" />
                 Watch Demo
               </a>
-              <a onClick={() => setMobileMenu(!mobileMenu)} href="">
+              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://t.me/company_dao">
                 Telegram
               </a>
-              <a onClick={() => setMobileMenu(!mobileMenu)} href="">
+              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://twitter.com/company_dao">
                 Twitter
               </a>
-              <a onClick={() => setMobileMenu(!mobileMenu)} href="">
+              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://medium.com/@CompanyDAO">
                 Medium
               </a>
-              <a onClick={() => setMobileMenu(!mobileMenu)} href="">
+              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://calendly.com/companydao/intro">
                 Get in touch
               </a>
             </div>

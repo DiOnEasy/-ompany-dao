@@ -49,10 +49,12 @@ export const TokenizationContent: FC<ITokenization> = ({
             </div>
             {!isTablet && (
               <div className={s.button}>
-                <Button title="Book a demo" icon="/img/calendar.svg" link="" />
+
+                <Button title="Book a demo" icon="/img/calendar.svg" link="https://calendly.com/companydao/intro" />
                 <div onClick={() => setShown(true)}>
                   <Button
-                    title="Submit a request"
+                    title="Contact sales"
+
                     icon="/img/request.svg"
                     link=""
                   />
@@ -64,16 +66,19 @@ export const TokenizationContent: FC<ITokenization> = ({
         {isTablet && (
           <div className={s.tokenization__buttons}>
             <div className={s.button}>
-              <Button title="Book a demo" icon="/img/calendar.svg" link="" />
+
+              <Button title="Book a demo" icon="/img/calendar.svg" link="https://calendly.com/companydao/intro" />
               <div onClick={() => setShown(true)}>
                 <Button
-                  title="Submit a request"
+                  title="Contact sales"
+
                   icon="/img/request.svg"
                   link=""
                 />
               </div>
             </div>
-
+            
+            
             <button onClick={() => setView(!view)}>
               {!view ? (
                 <>

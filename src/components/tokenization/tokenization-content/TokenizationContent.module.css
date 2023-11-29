@@ -12,6 +12,10 @@
     column-gap: 88px;
 }
 
+.image img{
+    height: 600px
+}
+
 .text {
     padding-top: 25px;
     display: flex;

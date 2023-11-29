@@ -1,40 +1,72 @@
+
+import React, { useState } from 'react'; // Import useState
 import modalStore from "../../../store/modal/modal.store";
 import s from "./ContactModal.module.css";
+import axios from 'axios';
+
 
 interface IInputs {
   placeholder: string;
   type: string;
   required: boolean;
+  name: string; // Added 'name' to link each input with its value
 }
 
 const inputsData: IInputs[] = [
-  { placeholder: "Full Name", type: "text", required: true },
-  { placeholder: "Email", type: "email", required: true },
-  { placeholder: "Phone", type: "tel", required: false },
-  { placeholder: "Company Name", type: "text", required: false },
+  // Include 'name' for each input
+  { placeholder: "Full Name", type: "text", required: true, name: "fullName" },
+  { placeholder: "Email", type: "email", required: true, name: "email" },
+  { placeholder: "Phone", type: "tel", required: false, name: "phone" },
+  { placeholder: "Company Name", type: "text", required: false, name: "companyName" },
+
   {
     placeholder: "Estimated size/value of asset for tokenization",
     type: "text",
     required: false,
+
+    name: "assetSize"
+
   },
   {
     placeholder: "Start date for legal and tokenization tasks",
     type: "text",
     required: false,
+
+    name: "startDate"
   },
-  { placeholder: "Message", type: "text", required: false },
+  { placeholder: "Message", type: "text", required: false, name: "message" },
+
 ];
 
 export const ContactModal = () => {
   const { setShown, setSubmitted } = modalStore;
 
+  const [formData, setFormData] = useState({}); // State to store form data
+
+  const handleInputChange = (e:any) => {
+    // Function to update state with input values
+    setFormData({...formData, [e.target.name]: e.target.value});
+  }
+
   const submitForm = () => {
     setSubmitted(true);
+
+    // Axios POST request
+    axios.post('https://backend.dev.companydao.org/api/add_lead', formData)
+      .then(response => {
+        console.log(response.data);
+        // Handle success
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Handle error
+      });
   };
+
   return (
     <div className={s.modal}>
       <form
-        action=""
+
         onSubmit={(e) => {
           e.preventDefault();
           submitForm();
@@ -50,11 +82,15 @@ export const ContactModal = () => {
           </div>
         </div>
         <div className={s.modal__inputs}>
-          {inputsData.map((input) => (
-            <div className={input.required === true ? s.modal__required : ""}>
+
+          {inputsData.map((input, index) => (
+            <div key={index} className={input.required === true ? s.modal__required : ""}>
               <input
+                name={input.name} // Set name for each input
                 type={input.type}
-                {...(input.required && { required: true })}
+                onChange={handleInputChange} // Add onChange to update state
+                required={input.required}
+
                 placeholder={input.placeholder}
               />
             </div>
@@ -71,7 +107,9 @@ export const ContactModal = () => {
         <div className={s.modal__privacy}>
           <p>
             <span>By submitting request you agreed </span>
-            <a href="">with Privacy Policy</a>
+
+            <a target="_href" href="https://doc.companydao.org/company-as-a-service/legal-docs/privacy-policy">with Privacy Policy</a>
+
           </p>
         </div>
       </form>

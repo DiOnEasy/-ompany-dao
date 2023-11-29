@@ -29,4 +29,6 @@ export const Home: FC = observer(() => {
       </div>
     </div>
   );
+
 });
+
