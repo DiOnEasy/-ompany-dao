@@ -71,8 +71,8 @@ export const HeaderNav: React.FC<headerContentButtonRef> = ({ linkRef }) => {
             </a>
           </>
         )}
-        <div className={` ${showButton ? s.button__wrapper : s.none }`}>
-        <a className={s.navbar__button} href="https://app.companydao.org/">
+        <div className={` ${showButton ? s.none : s.button__wrapper}`}>
+        <a className={s.navbar__button  } href="https://app.companydao.org/">
           Enter App <img src="/img/small-arrow-right.svg" alt="" />
        
         </a>
