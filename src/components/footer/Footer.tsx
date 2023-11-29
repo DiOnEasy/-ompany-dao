@@ -21,7 +21,7 @@ export const Footer = () => {
     <div className={s.wrapper}>
       <div className={s.contacts}>
         <div className={s.qr}>
-          <img src="/img/qr.svg" alt="" />
+          <img src="/img/qr.png" alt="" />
         </div>
         {!isPhone ? (
           <div className={s.contacts__text}>

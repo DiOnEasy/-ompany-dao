@@ -12,6 +12,9 @@
     border-radius: 20px;
     width: 65.5%;
 }
+.contacts div img{
+    width: 170px;
+}
 
 .contacts__text {
     padding-top: 10px;
