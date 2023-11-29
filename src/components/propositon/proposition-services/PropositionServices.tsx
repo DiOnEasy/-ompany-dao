@@ -7,11 +7,11 @@ export const PropositionServices: FC = () => {
         <p className={s.title}>Jurisdictions</p>
         <p className={s.icons}>
           <span>
-            <img src="/img/proposition-services/usa.svg" alt="" />
+            <img src="/img/proposition-services/usa1.svg" alt="" />
             US
           </span>
           <span>
-            <img src="/img/proposition-services/panama.svg" alt="" />
+            <img src="/img/proposition-services/panama1.svg" alt="" />
             Panama
           </span>
         </p>
@@ -20,13 +20,13 @@ export const PropositionServices: FC = () => {
         <p className={s.title}>Payment Methods</p>
         <p className={s.icons}>
           <span>
-            <img src="/img/proposition-services/visa.svg" alt="" />
+            <img src="/img/proposition-services/visa1.svg" alt="" />
           </span>
           <span>
-            <img src="/img/proposition-services/mastercard.svg" alt="" />
+            <img src="/img/proposition-services/mastercard1.svg" alt="" />
           </span>
           <span>
-            <img src="/img/proposition-services/g-pay.svg" alt="" />
+            <img src="/img/proposition-services/g-pay1.svg" alt="" />
           </span>
           <span>ACH, Wire</span>
         </p>
@@ -35,10 +35,10 @@ export const PropositionServices: FC = () => {
         <p className={s.title}>Networks</p>
         <p className={s.icons}>
           <span>
-            <img src="/img/proposition-services/ethereum.svg" alt="" /> Ethereum
+            <img src="/img/proposition-services/ethereum1.svg" alt="" /> Ethereum
           </span>
           <span>
-            <img src="/img/proposition-services/polygon.svg" alt="" /> Polygon
+            <img src="/img/proposition-services/polygon1.svg" alt="" /> Polygon
           </span>
         </p>
       </div>

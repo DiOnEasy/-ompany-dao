@@ -9,10 +9,17 @@ interface buttonData {
 export const Button: FC<buttonData> = ({ title, icon, link }) => {
   return (
     <div className={s.wrapper}>
-      <a target="_blank"   href={link}>
-       <span> {title} </span>
-        <img src={icon} alt="" />
-      </a>
+      {link ? (
+        <a target="_blank"  href={link}>
+          <span> {title} </span>
+          <img src={icon} alt="" />
+        </a>
+      ) : (
+        <div>
+          <span> {title} </span>
+          <img src={icon} alt="" />
+        </div>
+      )}
     </div>
   );
 };

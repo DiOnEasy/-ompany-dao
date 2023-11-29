@@ -39,7 +39,7 @@ export const Footer = () => {
             <p className={s.phone__number}>
               Telegram, WhatsApp: <span>+1 307 217-3127</span>
             </p>
-            <p className={s.email}>Send an email: <span><a href="">email@companydao.org</a></span></p>
+            <p className={s.email}>Send an email: <span><a href="mailto:email@companydao.org">email@companydao.org</a></span></p>
             <p className={s.address}>
               Delta Alpha Omega DAO LLC
               <br /> 1531 Bellaire St, Denver, CO, 80220, USA
@@ -49,7 +49,7 @@ export const Footer = () => {
       </div>
       <div className={s.links}>
         {!isPhone && <p>
-          <a href="">More</a>
+          <a >More</a>
         </p>}
         
         <p>
