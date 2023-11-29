@@ -14,7 +14,7 @@ export const HeaderContent = () => {
         <div className={s.buttons}>
           <div className={s.button}>
             <a target="_blank"  href="https://calendly.com/companydao/intro">
-              <span>Book a demo</span>
+              <span>Book a Demo</span>
               <span>
                 <img src="/img/calendar.svg" alt="" />
               </span>
@@ -24,7 +24,7 @@ export const HeaderContent = () => {
             <a href="https://app.companydao.org/">
               <span>Enter App</span>
               <span >
-                <img src="/img/arrow-right-black.svg" alt="" />
+                <img src="/img/arrow-right.svg" alt="" />
               </span>
             </a>
           </div>
