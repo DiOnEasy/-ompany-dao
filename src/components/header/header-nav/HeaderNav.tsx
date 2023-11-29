@@ -1,9 +1,35 @@
 import { useEffect, useState } from "react";
 import s from "./HeaderNav.module.css";
 
-export const HeaderNav = () => {
+interface headerContentButtonRef {
+  linkRef: React.RefObject<HTMLAnchorElement>;
+}
+
+export const HeaderNav: React.FC<headerContentButtonRef> = ({ linkRef }) => {
   const [isTablet, setIsTablet] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+
+      if (linkRef && linkRef.current) {
+        const elementY = linkRef.current.getBoundingClientRect().top;
+       
+        if (elementY > 64) {
+          setShowButton(false);
+        } else {
+          setShowButton(true);
+
+        }
+
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("resize", handleScroll);
+
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,7 +39,7 @@ export const HeaderNav = () => {
         setIsTablet(false);
       }
     };
-    handleResize()
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -22,7 +48,6 @@ export const HeaderNav = () => {
     // <div className={s.header}>
     <div className={s.wrapper}>
       <a href="/" className={s.logo}>
-       
         <img src="/img/logo.svg" alt="" />
       </a>
       <div className={s.navbar}>
@@ -32,16 +57,27 @@ export const HeaderNav = () => {
               <img src="/img/youtube.svg" alt="" />
               Watch Demo
             </a>
-            <a target="_blank" href="https://t.me/company_dao">Telegram</a>
-            <a target="_blank" href="https://twitter.com/company_dao">Twitter</a>
-            <a target="_blank" href="https://medium.com/@CompanyDAO">Medium</a>
-            <a target="_blank" href="https://calendly.com/companydao/intro">Get in touch</a>
+            <a target="_blank" href="https://t.me/company_dao">
+              Telegram
+            </a>
+            <a target="_blank" href="https://twitter.com/company_dao">
+              Twitter
+            </a>
+            <a target="_blank" href="https://medium.com/@CompanyDAO">
+              Medium
+            </a>
+            <a target="_blank" href="https://calendly.com/companydao/intro">
+              Get in touch
+            </a>
           </>
         )}
-
+        <div className={` ${showButton ? s.button__wrapper : s.none }`}>
         <a className={s.navbar__button} href="https://app.companydao.org/">
           Enter App <img src="/img/small-arrow-right.svg" alt="" />
+       
         </a>
+        </div>
+       
         {isTablet && (
           <>
             <div
@@ -57,20 +93,40 @@ export const HeaderNav = () => {
                 mobileMenu == true ? s.active : ""
               }`}
             >
-              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://www.youtube.com/@CompanyDAO">
+              <a
+                target="_blank"
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="https://www.youtube.com/@CompanyDAO"
+              >
                 <img src="/img/youtube.svg" alt="" />
                 Watch Demo
               </a>
-              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://t.me/company_dao">
+              <a
+                target="_blank"
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="https://t.me/company_dao"
+              >
                 Telegram
               </a>
-              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://twitter.com/company_dao">
+              <a
+                target="_blank"
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="https://twitter.com/company_dao"
+              >
                 Twitter
               </a>
-              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://medium.com/@CompanyDAO">
+              <a
+                target="_blank"
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="https://medium.com/@CompanyDAO"
+              >
                 Medium
               </a>
-              <a target="_blank" onClick={() => setMobileMenu(!mobileMenu)} href="https://calendly.com/companydao/intro">
+              <a
+                target="_blank"
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="https://calendly.com/companydao/intro"
+              >
                 Get in touch
               </a>
             </div>

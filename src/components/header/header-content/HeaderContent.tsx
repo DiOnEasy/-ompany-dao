@@ -1,6 +1,16 @@
 import s from "./HeaderContent.module.css";
 
-export const HeaderContent = () => {
+
+
+interface headerContentButtonRef {
+  forwardedRef: React.RefObject<HTMLAnchorElement>;
+}
+
+
+export const HeaderContent : React.FC<headerContentButtonRef>  = ({ forwardedRef }) => {
+
+
+  
   return (
     <>
       <div className={s.wrapper}>
@@ -21,7 +31,7 @@ export const HeaderContent = () => {
             </a>
           </div>
           <div className={`${s.button} ${s.button__white}`}>
-            <a href="https://app.companydao.org/">
+            <a ref={forwardedRef} href="https://app.companydao.org/">
               <span>Enter App</span>
               <span >
                 <img src="/img/arrow-right.svg" alt="" />
