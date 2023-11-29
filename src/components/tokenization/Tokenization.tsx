@@ -17,18 +17,27 @@ export const Tokenization: FC = () => {
       <div className={s.title}>
         <p>Tokenization Platform as a Service</p>
       </div>
+      <div className={s.navbar__wrapper}>
       <div className={s.navbar}>
         {links.map((link, index) => (
-          <span  className={index === tab ? s.selected : ''}
+          <span
+            className={index === tab ? s.selected : ""}
             onClick={() => {
               setTab(index);
             }}
           >
+            <p>
             {link}
+            </p>
+           
           </span>
         ))}
       </div>
+      </div>
+      
+
       <div className={s.content}>
+        <div className={s.line}></div>
         <TokenizationContent
           image={TokenizationData[tab].image}
           titles={TokenizationData[tab].titles}

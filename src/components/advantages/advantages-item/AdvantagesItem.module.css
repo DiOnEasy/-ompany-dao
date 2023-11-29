@@ -47,17 +47,17 @@
 @media (max-width: 480px) {
    .wrapper{
     padding: 10px 16px 10px 10px;
+    height: calc(170px - 20px);
 
    }
     .icon {
         width: 41px;
         height: 41px;
-        margin-bottom: 41px;
 
     }
 
     .icon span img {
-        height: 24px;
+        height: 23px;
     }
     .title {
         font-size: 20px;

@@ -7,4 +7,6 @@ body, body *{
 }
 body{
   overflow-x: hidden;
+  background-color: #ffffff; /* код цвета для белого */
+  -webkit-background-color: #ffffff; /* вендорный префикс для Safari */
 }

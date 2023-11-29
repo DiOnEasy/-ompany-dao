@@ -74,7 +74,7 @@
 
     .content {
         flex-direction: column;
-        padding: 12px 12px 22px;
+        padding: 12px 12px 2px;
         justify-content: space-between;
     }
 

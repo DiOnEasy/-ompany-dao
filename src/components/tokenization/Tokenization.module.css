@@ -1,5 +1,6 @@
 .wrapper {
     padding: 180px 0 0 0;
+
 }
 
 .title {
@@ -14,7 +15,7 @@
 }
 
 .navbar {
-    border-bottom: 1px solid #0000001A;
+    /* border-bottom: 1px solid #0000001A; */
     display: flex;
     align-items: center;
     column-gap: 41px;
@@ -29,6 +30,20 @@
 .navbar {
     scrollbar-width: none;
     /* скрываем ширину скроллбара */
+}
+
+.content {
+    position: relative;
+
+}
+
+.line {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0px;
+    top: -49px;
+    background: #0000001A;
 }
 
 .navbar span {
@@ -46,12 +61,63 @@
 }
 
 .selected {
-    border-bottom: 3px solid black;
+    position: relative;
+}
+.selected p{
+    color: #000000;
+
+}
+.selected::after {
+    content: '';
+    height: 3px;
+    border-radius: 12px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
 }
 
 @media (max-width: 1024px) {
     .navbar {
+        /* margin-left: -3%; */
+        width: 103%;
         column-gap: 20px;
+        /* position: relative; */
+    }
+    .navbar__wrapper{
+        position: relative;
+    }
+
+    .navbar__wrapper::after {
+        content: '';
+        height: 39px;
+        width: 32px;
+        position: absolute;
+        right: -3%;
+        bottom: 0;
+        background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 101.56%);
+
+    }
+
+    .navbar__wrapper::before {
+        z-index: 1;
+        content: '';
+        height: 39px;
+        width: 32px;
+        position: absolute;
+        left: -3%;
+        bottom: 0;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 101.56%);
+
+    }
+
+    .line {
+        z-index: 999;
+        width: 106%;
+        left: -3%;
+        top: -49px;
     }
 }
 
@@ -60,6 +126,26 @@
         font-size: 40px;
     }
 
+    .line {
+        width: 108%;
+        left: -4%;
+        top: -49px;
+    }
+
+    
+    .navbar__wrapper::after {
+    
+        right: -4%;
+   
+
+    }
+
+    .navbar__wrapper::before {
+   
+        left: -4%;
+    
+
+    }
     .navbar span {
         font-size: 20px;
     }
@@ -71,8 +157,12 @@
         line-height: 45px;
     }
 
-    
-    .navbar span{
+    .line {
+
+        top: -30px;
+    }
+
+    .navbar span {
         padding: 8px 0 10px;
         font-size: 18px;
 
