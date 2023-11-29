@@ -9,27 +9,28 @@ export const HeaderNav: React.FC<headerContentButtonRef> = ({ linkRef }) => {
   const [isTablet, setIsTablet] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const [pageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
+    console.log("h");
     const handleScroll = () => {
-
+      if (showButton == true) {
+        setPageLoaded(true);
+      }
       if (linkRef && linkRef.current) {
         const elementY = linkRef.current.getBoundingClientRect().top;
-       
+
         if (elementY > 64) {
           setShowButton(false);
         } else {
           setShowButton(true);
-
         }
-
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("resize", handleScroll);
-
-  }, []);
+  }, [showButton]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -71,13 +72,14 @@ export const HeaderNav: React.FC<headerContentButtonRef> = ({ linkRef }) => {
             </a>
           </>
         )}
-        <div className={` ${showButton ? s.none : s.button__wrapper}`}>
-        <a className={s.navbar__button  } href="https://app.companydao.org/">
-          Enter App <img src="/img/small-arrow-right.svg" alt="" />
-       
-        </a>
-        </div>
-       
+        {(showButton || pageLoaded) && (
+          <div className={` ${showButton ? s.button__wrapper : s.none}`}>
+            <a className={s.navbar__button} href="https://app.companydao.org/">
+              Enter App <img src="/img/small-arrow-right.svg" alt="" />
+            </a>
+          </div>
+        )}
+
         {isTablet && (
           <>
             <div

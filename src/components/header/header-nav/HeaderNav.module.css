@@ -134,6 +134,9 @@
   transform: translateX(0);
   animation: slideToRight .5s forwards;
 }
+.button__none{
+  display: none;
+}
 @keyframes slideToRight {
   to {
     opacity: 0;
