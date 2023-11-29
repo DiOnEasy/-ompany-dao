@@ -1,9 +1,9 @@
 .wrapper {
-    background: #1f1f1f;
-    padding: 14px;
+    background: linear-gradient(180deg, #1E1E1E 0%, #262626 100%);
+    padding: 12px 14px;
     box-shadow: 0px 0px 1px 0px #FFFFFF99 inset;
     box-shadow: 0px 0px 1px 0px #C9C9C959 inset;
-    border-radius: 8px;
+    border-radius: 12px;
 position: relative;
 cursor: pointer;
 }
@@ -24,7 +24,7 @@ cursor: pointer;
     background:  radial-gradient(273.57% 271.65% at 153.12% -133.36%, #4A4A4A 0%, #000000 52.63%, #4A4A4A 100%);
     content: '';
     z-index: -1;
-    border-radius: 8px;
+    border-radius: 12px;
 
 }
 
