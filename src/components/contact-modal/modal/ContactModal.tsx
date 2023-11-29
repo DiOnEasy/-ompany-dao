@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react'; // Import useState
 import modalStore from "../../../store/modal/modal.store";
 import s from "./ContactModal.module.css";
 import axios from 'axios';
+
 
 interface IInputs {
   placeholder: string;
@@ -16,23 +18,29 @@ const inputsData: IInputs[] = [
   { placeholder: "Email", type: "email", required: true, name: "email" },
   { placeholder: "Phone", type: "tel", required: false, name: "phone" },
   { placeholder: "Company Name", type: "text", required: false, name: "companyName" },
+
   {
     placeholder: "Estimated size/value of asset for tokenization",
     type: "text",
     required: false,
+
     name: "assetSize"
+
   },
   {
     placeholder: "Start date for legal and tokenization tasks",
     type: "text",
     required: false,
+
     name: "startDate"
   },
   { placeholder: "Message", type: "text", required: false, name: "message" },
+
 ];
 
 export const ContactModal = () => {
   const { setShown, setSubmitted } = modalStore;
+
   const [formData, setFormData] = useState({}); // State to store form data
 
   const handleInputChange = (e:any) => {
@@ -58,6 +66,7 @@ export const ContactModal = () => {
   return (
     <div className={s.modal}>
       <form
+
         onSubmit={(e) => {
           e.preventDefault();
           submitForm();
@@ -73,6 +82,7 @@ export const ContactModal = () => {
           </div>
         </div>
         <div className={s.modal__inputs}>
+
           {inputsData.map((input, index) => (
             <div key={index} className={input.required === true ? s.modal__required : ""}>
               <input
@@ -80,6 +90,7 @@ export const ContactModal = () => {
                 type={input.type}
                 onChange={handleInputChange} // Add onChange to update state
                 required={input.required}
+
                 placeholder={input.placeholder}
               />
             </div>
@@ -96,7 +107,9 @@ export const ContactModal = () => {
         <div className={s.modal__privacy}>
           <p>
             <span>By submitting request you agreed </span>
+
             <a target="_href" href="https://doc.companydao.org/company-as-a-service/legal-docs/privacy-policy">with Privacy Policy</a>
+
           </p>
         </div>
       </form>

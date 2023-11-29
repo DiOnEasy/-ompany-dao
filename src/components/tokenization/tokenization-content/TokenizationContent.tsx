@@ -40,21 +40,21 @@ export const TokenizationContent: FC<ITokenization> = ({
         {(!isTablet || !view) && (
           <div className={s.text}>
             <div className={s.text__content}>
-
-          
-            {titles.map((title, index) => (
-              <div className={s.item}>
-                <p>{title}</p>
-                <p>{texts[index]}</p>
-              </div>
-            ))}
-              </div>
+              {titles.map((title, index) => (
+                <div className={s.item}>
+                  <p>{title}</p>
+                  <p>{texts[index]}</p>
+                </div>
+              ))}
+            </div>
             {!isTablet && (
               <div className={s.button}>
+
                 <Button title="Book a demo" icon="/img/calendar.svg" link="https://calendly.com/companydao/intro" />
                 <div onClick={() => setShown(true)}>
                   <Button
                     title="Contact sales"
+
                     icon="/img/request.svg"
                     link=""
                   />
@@ -66,10 +66,12 @@ export const TokenizationContent: FC<ITokenization> = ({
         {isTablet && (
           <div className={s.tokenization__buttons}>
             <div className={s.button}>
+
               <Button title="Book a demo" icon="/img/calendar.svg" link="https://calendly.com/companydao/intro" />
               <div onClick={() => setShown(true)}>
                 <Button
                   title="Contact sales"
+
                   icon="/img/request.svg"
                   link=""
                 />
