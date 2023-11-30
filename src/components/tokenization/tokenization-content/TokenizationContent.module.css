@@ -54,7 +54,6 @@
 .button {
     display: flex;
     column-gap: 5px;
-    margin-bottom: 25px;
 }
 
 .tokenization__buttons button span {

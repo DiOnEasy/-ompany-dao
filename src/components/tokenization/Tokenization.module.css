@@ -137,12 +137,10 @@
 
 
     .navbar__wrapper::after {
-        height: 39px;
         right: -4%;
     }
 
     .navbar__wrapper::before {
-        height: 39px;
         left: -4%;
     }
 
@@ -156,7 +154,13 @@
         padding-bottom: 14px;
         line-height: 45px;
     }
+    .navbar__wrapper::after {
+        height: 39px;
+    }
 
+    .navbar__wrapper::before {
+        height: 39px;
+    }
     .line {
 
         top: -30px;
