@@ -63,10 +63,12 @@
 .selected {
     position: relative;
 }
-.selected p{
+
+.selected p {
     color: #000000;
 
 }
+
 .selected::after {
     content: '';
     height: 3px;
@@ -86,13 +88,14 @@
         column-gap: 20px;
         /* position: relative; */
     }
-    .navbar__wrapper{
+
+    .navbar__wrapper {
         position: relative;
     }
 
     .navbar__wrapper::after {
         content: '';
-        height: 39px;
+        height: 74px;
         width: 32px;
         position: absolute;
         right: -3%;
@@ -104,7 +107,7 @@
     .navbar__wrapper::before {
         z-index: 1;
         content: '';
-        height: 39px;
+        height: 74px;
         width: 32px;
         position: absolute;
         left: -3%;
@@ -132,20 +135,17 @@
         top: -49px;
     }
 
-    
-    .navbar__wrapper::after {
-    
-        right: -4%;
-   
 
+    .navbar__wrapper::after {
+        height: 39px;
+        right: -4%;
     }
 
     .navbar__wrapper::before {
-   
+        height: 39px;
         left: -4%;
-    
-
     }
+
     .navbar span {
         font-size: 20px;
     }
